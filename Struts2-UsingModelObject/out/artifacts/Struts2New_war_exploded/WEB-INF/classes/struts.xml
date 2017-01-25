@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <include file="login.xml"/>
+
+    <package name="default" namespace="/tutorials" extends="struts-default">
+        <action name="getTutorial" class="org.rohit.actions.TutorialActions" method="getTutorial">
+        <!--<action name="get*" class="org.rohit.actions.{1}Actions" method="execute">-->
+            <result name="success">/success.jsp</result>
+            <result name="failure">/failure.jsp</result>
+        </action>
+
+        <action name="addTutorial" class="org.rohit.actions.TutorialActions" method="addTutorial">
+            <!--<action name="get*" class="org.rohit.actions.{1}Actions" method="execute">-->
+            <result name="success">/success.jsp</result>
+            <result name="failure">/failure.jsp</result>
+        </action>
+    </package>
+
+    <package name="search" namespace="/" extends="struts-default">
+        <action name="search*">
+            <result>/search{1}.jsp</result>
+        </action>
+    </package>
+
+
+</struts>

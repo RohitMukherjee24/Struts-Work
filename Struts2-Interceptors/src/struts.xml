@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <include file="login.xml"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <interceptors>
+            <interceptor name="firstInterceptor" class="org.rohit.model.FirstInterceptor"/>
+            <interceptor name="secondInterceptor" class="org.rohit.model.SecondInterceptor"/>
+        </interceptors>
+
+
+        <action name="Dummy" class="org.rohit.actions.DummyAction" >
+            <interceptor-ref name="firstInterceptor"/>
+            <interceptor-ref name="secondInterceptor"/>
+            <result name="failure">/login.jsp</result>
+            <result name="success">/Welcome.jsp</result>
+        </action>
+
+
+    </package>
+
+</struts>

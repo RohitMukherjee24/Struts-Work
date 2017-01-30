@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <include file="login.xml"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="AutoComplete" class="org.rohit.actions.AutoCompleteAction" >
+        <!--<action name="get*" class="org.rohit.actions.{1}Actions" method="execute">-->
+            <!--<result name="success">/searchForm.jsp</result>-->
+            <result name="failure">/failure.jsp</result>
+            <result name="success">/autoComplete.jsp</result>
+        </action>
+
+        <!--<action name="addTutorial" class="org.rohit.actions.TutorialActions" method="addTutorial">-->
+            <!--&lt;!&ndash;<action name="get*" class="org.rohit.actions.{1}Actions" method="execute">&ndash;&gt;-->
+            <!--<result name="success">/success.jsp</result>-->
+            <!--<result name="failure">/failure.jsp</result>-->
+        <!--</action>-->
+    </package>
+
+</struts>

@@ -13,5 +13,4 @@
   8. Struts2 with using a Model Object
   9. Struts2 with using Wild card 
   
-  
   ******************************************************************
